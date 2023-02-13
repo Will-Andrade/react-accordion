@@ -1,5 +1,6 @@
 import { AccordionData } from "../../types";
 import AccordionItem from "../AccordionItem";
+import classes from './Accordion.styles.module.css';
 
 type AccordionComponentProps = {
   selectedItem: null | number;
@@ -12,11 +13,9 @@ export default function AccordionComponent({
   accordionContent,
   onButtonClickHandler
 }: AccordionComponentProps): JSX.Element {
-  
-  
   return (
-    <section>
-      <h2>Frequently Asked Questions</h2>
+    <section className={classes['accordion-box']}>
+      <h2 className={classes.title}>Frequently Asked Questions</h2>
       {accordionContent.map(({ id, title, content }: AccordionData) => (
         <AccordionItem 
           id={id} 

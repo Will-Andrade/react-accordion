@@ -1,0 +1,40 @@
+.card {
+  width: 100%;
+  background: #fff;
+  color: #1e1f1e;
+  padding: 1rem;
+  border-radius: .3rem;
+}
+
+.card:not(:last-child) {
+  margin: 0 0 1.5rem 0;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.toggle-btn {
+  display: block;
+  padding: .5rem 1rem;
+  border: none;
+  background: #1e1f1e;
+  color: #fff;
+  border-radius: .3rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.content {
+  font-size: 1.6rem;
+  padding: 1rem 0 0 0;
+  line-height: 1;
+  transition: all .3s ease-in;
+}

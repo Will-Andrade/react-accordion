@@ -1,3 +1,5 @@
+import classes from './AccordionItem.styles.module.css';
+
 type AccordionItemProps = {
   id: number;
   title: string;
@@ -14,14 +16,18 @@ export default function AccordionItemComponent({
   onClickHandler
 }: AccordionItemProps) {
   return (
-  <article>
-    <div>
-      <h3>{title}</h3>
-      <button type='button' onClick={() => onClickHandler(id)}>
+  <article className={classes.card}>
+    <div className={classes['card-content']}>
+      <h3 className={classes['card-title']}>{title}</h3>
+      <button 
+        type='button' 
+        className={classes['toggle-btn']}
+        onClick={() => onClickHandler(id)} 
+      >
         {id === selectedItem ? '-' : '+'}
       </button>
     </div>
-    {id === selectedItem && <p>{content}</p>}
+    {id === selectedItem && <p className={classes.content}>{content}</p>}
   </article>
   );
 };

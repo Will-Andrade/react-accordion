@@ -1,0 +1,18 @@
+.accordion-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e1f1e;
+  color: #fff;
+  max-width: 80rem;
+  width: 100%;
+  border-radius: .5rem;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
