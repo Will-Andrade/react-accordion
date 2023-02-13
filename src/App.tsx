@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import './App.css';
+import Accordion from './components/Accordion';
+import { AccordionData } from './types';
 
-// pass through props later
-const FAQData = [
+const FAQData: AccordionData[] = [
   { 
     id: 0,
     title: 'Is this a good product?',
@@ -21,31 +21,12 @@ const FAQData = [
 ];
 
 function App() {
-  const [selectedItem, setSelectedItem] = useState<null | number>(null);
-
-  const onButtonClickHandler = (id: number) => {
-    if (selectedItem === id) return setSelectedItem(null);
-    setSelectedItem(id);
-  };
-
-  return (<main>
-    <h1>React Accordion</h1>
-
-    <section>
-      <h2>Frequently Asked Questions</h2>
-      {FAQData.map(({ id, title, content }) => (
-        <article key={id}>
-          <div>
-            <h3>{title}</h3>
-            <button type='button' onClick={() => onButtonClickHandler(id)}>
-              {id === selectedItem ? '-' : '+'}
-            </button>
-          </div>
-          {id === selectedItem && <p>{content}</p>}
-        </article>
-      ))}
-    </section>
-  </main>);
+  return (
+    <main>
+      <h1>React Accordion</h1>    
+      <Accordion data={FAQData} />
+    </main>
+  );
 };
 
 export default App;
