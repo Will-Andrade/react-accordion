@@ -16,18 +16,19 @@ export default function AccordionItemComponent({
   onClickHandler
 }: AccordionItemProps) {
   return (
-  <article className={classes.card}>
+  <article className={classes.card} data-testid={`accItem-${id}`}>
     <div className={classes['card-content']}>
       <h3 className={classes['card-title']}>{title}</h3>
       <button 
         type='button' 
         className={classes['toggle-btn']}
+        data-testid={`acc-toggle-${id}`}
         onClick={() => onClickHandler(id)} 
       >
         {id === selectedItem ? '-' : '+'}
       </button>
     </div>
-    {id === selectedItem && <p className={classes.content}>{content}</p>}
+    {id === selectedItem && <p className={classes.content} data-testid={`acc-content-${id}`}>{content}</p>}
   </article>
   );
 };

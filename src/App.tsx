@@ -23,7 +23,7 @@ const FAQData: AccordionData[] = [
 function App() {
   return (
     <main>
-      <h1>React Accordion</h1>    
+      <h1 data-testid="proj-title">React Accordion</h1>    
       <Accordion data={FAQData} />
     </main>
   );

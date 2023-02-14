@@ -14,7 +14,7 @@ export default function AccordionComponent({
   onButtonClickHandler
 }: AccordionComponentProps): JSX.Element {
   return (
-    <section className={classes['accordion-box']}>
+    <section className={classes['accordion-box']} data-testid="accordion">
       <h2 className={classes.title}>Frequently Asked Questions</h2>
       {accordionContent.map(({ id, title, content }: AccordionData) => (
         <AccordionItem 
